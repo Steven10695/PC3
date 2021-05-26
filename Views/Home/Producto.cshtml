@@ -1,0 +1,52 @@
+@model Producto
+<body style="background-color: #FFFFFF;">  
+<div class="text-center" style="margin-top: 40px;">
+    <h1 class="p-3 mb-2 text-black display-4">Agregar Productos</h1>
+</div>
+
+<div  class="container">
+
+<div asp-validation-summary="All"></div>
+
+<form action="" method="post">  
+    
+  <div class="form-group">
+    <label for="">Nombre : </label>
+    <input type="text" asp-for="Nombre" class="form-control" id=""  placeholder="Ingrese Nombre">
+  </div>
+
+  <div class="form-group">
+    <label for="">Foto de URL del Producto:</label>
+    <input type="text" asp-for="FotoUrl" class="form-control" id=""  placeholder="Ingrese URL de imagen">
+  </div>
+
+  <div class="form-group">
+    <label for="">Descripción: </label>
+    <input type="text" asp-for="Descripcion" class="form-control" id=""  placeholder="Ingrese Descripcion">
+  </div>
+
+  <div class="form-group">
+    <label for="">Precio: </label>
+    <input type="text" asp-for="Precio" class="form-control" id=""  placeholder="Ingrese Precio">
+    
+  </div>
+  <div class="form-group">
+    <label for="">Celular: </label>
+    <input type="tel" asp-for="Telefono" class="form-control" id=""  placeholder="Ingrese Número de Celular">
+  </div>
+
+  <div class="form-group">
+    <label for="">Lugar de Compra: </label>
+    <input type="text" asp-for="LugarCompra" class="form-control" id=""  placeholder="Ingrese Lugar de Compra">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nombre de Comprador: </label>
+    <input type="text" asp-for="NombreComprador" class="form-control" id=""  placeholder="Ingrese Nombre de Comprador">
+  </div>
+  <div style="text-align: center; margin-top: 15px; margin-bottom: 15px;">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+  </div>
+</form>
+</div>
+</body>

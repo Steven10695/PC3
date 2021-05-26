@@ -1,0 +1,41 @@
+@model List<Producto>
+@{
+    ViewData["Title"] = "Solicitudes de Productos Añadidos";
+}
+<body style="background-color: #FFFFFF;">  
+<div class="text-center" style="margin-top: 40px;">
+    <h1 class="display-4">Solicitudes Registradas en los Ultimos 5 días</h1>
+</div>
+
+<div style="margin-top: 30px; text-align: center;">
+    @if (Model.Count == 0)
+    {
+        <div class="p-3 mb-2 bg-danger text-white">Erro al registrar datos de registro de productos</div>
+    }
+</div>
+
+<div style="margin-top: 30px;">
+    <div class="row">
+        @foreach (var producto in Model)
+        { 
+            <span class="border border-warning">
+            <div class="col-lg-4">
+                <div class="card" style="width: 18rem; margin-bottom: 25px;">
+                    <img src="@producto.FotoUrl" class="card-img-top">
+                        <div class="card-body" style="text-align: center; margin-top: 15px;">
+                            <h5 class="card-title">@producto.Nombre</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Descripción: </strong>@producto.Descripcion</li>
+                            <li class="list-group-item"><strong>Precio: </strong>@producto.Precio</li>
+                            <li class="list-group-item"><strong>Teléfono: </strong>@producto.Telefono</li>
+                            <li class="list-group-item"><strong>Lugar: </strong>@producto.LugarCompra</li>
+                            <li class="list-group-item"><strong>Nombre Comprador: </strong>@producto.NombreComprador</li>
+                        </ul>
+                </div>
+            </div>
+            </span>
+        }
+    </div>
+</div>
+</body>
